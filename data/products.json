@@ -1,0 +1,13 @@
+[
+  {
+    "id": "03c29bab-67bd-4a72-99fd-2fc29be37e37",
+    "title": "zapato",
+    "description": "es un jabon hecho de jabon",
+    "code": "21",
+    "price": 124,
+    "status": false,
+    "stock": 8,
+    "category": "zapatos",
+    "thumbnails": []
+  }
+]
