@@ -1,5 +1,6 @@
 import { Router } from 'express';
 import { ProductManager } from '../managers/ProductManager.js';
+import { io } from '../server.js';
 
 const router = Router();
 const manager = new ProductManager();
@@ -28,5 +29,21 @@ router.delete('/:pid', async (req, res) => {
   const deleted = await manager.deleteProduct(req.params.pid);
   deleted ? res.sendStatus(204) : res.status(404).json({ error: 'Producto no encontrado' });
 });
+
+
+router.post('/', async (req, res) => {
+  const newProduct = await manager.addProduct(req.body);
+  const products = await manager.getProducts();
+  io.emit('products', products); 
+  res.status(201).json(newProduct);
+});
+
+router.delete('/:pid', async (req, res) => {
+  const deleted = await manager.deleteProduct(req.params.pid);
+  const products = await manager.getProducts();
+  io.emit('products', products); 
+  deleted ? res.sendStatus(204) : res.status(404).json({ error: 'Producto no encontrado' });
+});
+
 
 export default router;

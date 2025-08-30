@@ -9,5 +9,17 @@
     "stock": 8,
     "category": "zapatos",
     "thumbnails": []
+  },
+  {
+    "id": "40b79402-661b-4595-8b18-8dd3f08f759e",
+    "title": "camiseta",
+    "price": "100",
+    "stock": "23"
+  },
+  {
+    "id": "8974ccb6-d8ff-4eb2-9c10-b13d87d458b8",
+    "title": "agustin",
+    "price": "1",
+    "stock": "1"
   }
 ]
