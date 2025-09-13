@@ -1,0 +1,7 @@
+<!-- filepath: c:\Users\PC\Documents\GitHub\backend-solution\src\views\home.handlebars -->
+<h1>Lista de Productos</h1>
+<ul>
+  {{#each products}}
+    <li>{{this.title}} - ${{this.price}} - Stock: {{this.stock}}</li>
+  {{/each}}
+</ul>

@@ -1,4 +1,24 @@
 {
+  "name": "back-end",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "express-handlebars": "^8.0.2",
+    "socket.io": "^4.8.1"
+  }
+}
+
+{
   "0": {
     "id": 1,
     "name": "Leanne Graham",
